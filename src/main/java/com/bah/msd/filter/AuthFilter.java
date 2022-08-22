@@ -22,6 +22,10 @@ import com.bah.msd.logging.ApiLogger;
 @Component
 @Order(1)
 public class AuthFilter implements Filter{
+	
+	public AuthFilter() {
+		System.out.println("AuthFilter () constructor method");
+	}
 
 	//public static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 	private String auth_scope = "com.webage.auth.apis";
@@ -34,7 +38,7 @@ public class AuthFilter implements Filter{
 		HttpServletResponse res = (HttpServletResponse) response;
 		String uri = req.getRequestURI();
 		
-		
+		System.out.println("AuthFilter doFilter method is called");
 		// for development purposes
 		// allow turning off auth checking with header tokencheck:false
 		String tokenheader = req.getHeader("tokencheck");
