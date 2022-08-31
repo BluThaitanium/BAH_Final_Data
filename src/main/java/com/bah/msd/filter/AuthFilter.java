@@ -38,7 +38,7 @@ public class AuthFilter implements Filter{
 		HttpServletResponse res = (HttpServletResponse) response;
 		String uri = req.getRequestURI();
 		
-		System.out.println("AuthFilter doFilter method is called");
+		System.out.println("AuthFilter doFilter method is called " + uri);
 		// for development purposes
 		// allow turning off auth checking with header tokencheck:false
 		String tokenheader = req.getHeader("tokencheck");
