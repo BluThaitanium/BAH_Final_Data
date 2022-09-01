@@ -1,6 +1,6 @@
 node {
     stage ("Checkout DataApi"){
-        git branch: 'main', url: ' https://github.com/foxwas/bahmsdfox-msdataservice.git'
+        git branch: 'main', url: ' https://github.com/foxwas/bahmsdmccdata.git'
     }
     
     stage ("Gradle Build - DataApi") {
